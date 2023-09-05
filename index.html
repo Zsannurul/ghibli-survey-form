@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghibli Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Halo ghibli fans</h1>
+    <p id="description">bantu isi formulir yak!</p>
+
+    <form id="survey-form">
+      <!-- bio diri -->
+      <fieldset class="field-satu">
+        <label for="name" id="name-label">
+          nama
+          <input type="text" id="name" placeholder="masukin nama kamu..." required />
+        </label>
+        <label for="email" id="email-label">
+          email
+          <input type="email" id="email" placeholder="totoro@gmail.com..." required />
+        </label>
+        <label for="number" id="number-label">
+          umur
+          <input type="number" id="number" placeholder="umur kamu?..." min="10" max="70" required />
+        </label>
+
+        <label for="dropdown" id="dropdown-label">
+          berapa banyak movie ghibli yang kamu tonton ?
+          <select name="dropdown" id="dropdown" required>
+            <option value="">baru satu</option>
+            <option value="">2</option>
+            <option value="">3 atau lebih dari 3</option>
+            <option value="">lebih dari 5</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <!-- movie favorit -->
+      <fieldset class="field-dua">
+        <span>movie ghibli pertama kamu apa ?</span>
+        <br />
+        <br />
+        <br />
+        <label for="howl"> <input type="radio" name="favorit" id="howl" value="1" /> howl moving castle </label>
+
+        <label for="spirited"> <input type="radio" name="favorit" id="spirited" value="2" /> spirited away </label>
+
+        <label for="totoro"> <input type="radio" name="favorit" id="totoro" value="3" /> my neighbor totoro </label>
+
+        <label for="kiki"> <input type="radio" name="favorit" id="kiki" value="4" /> kiki's delivery service </label>
+
+        <label for="woth"> <input type="radio" name="favorit" id="woth" value="5" /> Whisper of the Heart </label>
+      </fieldset>
+
+      <!-- reasoning -->
+      <fieldset class="field-tiga">
+        <span>apa yang membuat kamu suka movie ghibli?</span>
+        <br />
+        <br />
+        <br />
+        <label for="char"> <input type="checkbox" id="char" value="char" />karakternya </label>
+        <label for="song"> <input type="checkbox" id="song" value="song" />musiknya </label>
+      </fieldset>
+
+      <!-- experience -->
+      <fieldset class="field-empat">
+        <label for="comments" id="comments-label">
+          <span>ceritain pengalaman kamu ketika nonton movie ghibli dong!</span>
+          <textarea id="comments" cols="30" rows="10" placeholder="saya seperti terbawa masuk dalam dunia fantasi ghibli..."></textarea>
+        </label>
+      </fieldset>
+
+      <!-- submit -->
+      <fieldset class="field-lima">
+        <button type="submit" id="submit">submit</button>
+      </fieldset>
+    </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

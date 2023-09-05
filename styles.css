@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,100&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, rgba(210, 158, 10, 0.6) 0%, rgba(94, 179, 36, 0.8) 46%, rgba(8, 199, 145, 0.6) 100%), url(image/ghibli.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 2000px;
+}
+
+h1,
+p {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 1px;
+  margin-top: 40px;
+}
+
+p {
+  margin-bottom: 40px;
+}
+form {
+  max-width: 600px;
+  background-color: rgba(42, 136, 73, 0.4);
+  margin: 0 auto;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid rgba(94, 179, 36, 0.8);
+}
+
+label,
+input,
+select {
+  display: block;
+}
+
+label {
+  margin-bottom: 20px;
+}
+
+@keyframes blink-shadow {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(52, 152, 219, 0.5);
+  }
+}
+
+span {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/* fieldset 1 */
+.field-satu input,
+select {
+  margin-top: 10px;
+  height: 40px;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: inherit;
+  transition: border-color 0.8s ease;
+}
+input:focus {
+  background-color: aliceblue;
+  outline: none;
+  border: 2px solid rgba(42, 136, 73, 0.4); /* Contoh: garis biru pada fokus */
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.5); /* Efek bayangan */
+  animation: blink 1s infinite;
+}
+select:focus {
+  background-color: aliceblue;
+  outline: none;
+  border: 2px solid rgba(42, 136, 73, 0.4); /* Contoh: garis biru pada fokus */
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.5); /* Efek bayangan */
+  animation: blink 1s infinite;
+}
+/* fieldset 2 */
+.field-dua input {
+  display: inline;
+}
+.field-dua label {
+  margin: 1px;
+}
+
+.field-empat textarea {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  background-color: gainsboro;
+}
+/* .field-empat textarea:active {
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.5);
+} */
+.field-empat textarea:focus {
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.5);
+}
+
+button {
+  width: 100%;
+  height: 35px;
+  background-color: rgb(42, 253, 112);
+  border: 0;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  appearance: none; /* Hilangkan gaya bawaan browser */
+  -webkit-appearance: none; /* Untuk browser berbasis Webkit seperti Chrome dan Safari */
+  -moz-appearance: none; /* Untuk browser Mozilla Firefox */
+  width: 20px; /* Lebar elemen checkbox */
+  height: 20px; /* Tinggi elemen checkbox */
+  border: 2px solid #2a8849; /* Contoh: border hijau */
+  border-radius: 4px; /* Sudut border yang melengkung */
+  background-color: white; /* Warna latar belakang */
+  cursor: pointer; /* Ubah kursor saat diarahkan ke elemen */
+}
+input[type="checkbox"]:checked {
+  background-color: #2a8849; /* Warna latar belakang saat dicentang */
+  border: 2px solid #2a8849; /* Warna border saat dicentang */
+}
